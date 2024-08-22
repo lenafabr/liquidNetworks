@@ -1,0 +1,31 @@
+# run simulation starting from a small, simple network
+
+# what to run
+ACTION BROWNDYN
+
+# network structure stored in this file
+MINNETFILE example1.net
+
+# drift velocity
+MOB 1D0
+
+# growth
+GROWTH 5D0
+CATA 1D0
+GVEL 1D0
+
+# boundaries
+CENTERENCLOSE # if present, center initial network and enclose with circle of edges
+
+# dump out snapshots
+SNAPSHOTFILE *.dump.out
+
+# number of simulation steps
+BDSTEPS 5000
+
+# output frequency
+BDPRINTEVERY 10
+SNAPSHOTS 10
+
+# fix node
+FIXNODEFROMNETFILE
